@@ -10,7 +10,7 @@ We want you all to get an intro to firebase and similar backend technology so We
 
 
 # Sample Task 
-{
+
 The task involves creating a form with specific fields and submitting the form. On submission, the data should be stored in a [Firestore database](https://firebase.google.com/docs/firestore). Yor are also required to create a collection with your first name and branch, following a specific naming convention (mentioned below). I can add some good resources for firebase and form but I want to test your Googling skills. But wherever you fill confused, feel free to ask in WhatsApp group.
 
 ## Task Requirements
@@ -34,14 +34,14 @@ The task involves creating a form with specific fields and submitting the form. 
    - For example, if a participant's name is "Shivanshu Ranjan" and their branch is "Chemical Engineering" the collection name would be "ShivanshuChemical".
 
 7. Once participants complete the task,host the form on services like (netlify or vercel) and raise a pull request on this repository with the link of your hosted site in description.
-}
+
 
 # Bonus Task
 Can you create a functionality to upload an image also to the firebase storage bucket along with form submission, Keep the folder name in the same format i.e "FirstNameBranch" ?
 
 Hint: You can use input type as file like   "<input type="file" id="fileInput" />" and then you can get the image object from  const file = document.getElementById("fileInput").files[0] .After that you can upload this file to storagebucket by creating a reference to storage bucket just like you are doing for form submission.
 
-# suggestion/warning 
+# Suggestion/Warning 
 Take help from chatgpt/gemini whenever required . They will make your work a lot easy but don't go on just blindly copy pasting the code from chatgpt as We will be discussing your project in details in the interview if shortlisted .
 
 
