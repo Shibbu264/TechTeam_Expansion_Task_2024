@@ -49,7 +49,7 @@ Take help from chatgpt/gemini whenever required . They will make your work a lot
 
 ## Deadline
 
-The deadline for completing this task is the end of the day (EOD) on July 6th.(Negotiable if requested)
+The deadline for completing this task is the end of the day (EOD) on June 6th.(Negotiable if requested)
 
 ## Additional Notes
 
