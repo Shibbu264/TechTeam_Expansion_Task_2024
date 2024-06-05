@@ -108,7 +108,7 @@ const App = () => {
                   required: 'Branch of study is required',
                 })}
               >
-                <option value="">Click to Select Branch </option>
+                <option value="">Click to Select Branch of study </option>
                 <option value="Biochemical-Biomedical Engineering">
                   Biochemical/Biomedical Engineering
                 </option>
@@ -210,8 +210,8 @@ const App = () => {
                   {errors.phoneNumber.message}
                 </p>}
             </div>
-            <div className="mb-4">
-              <label htmlFor="fileInput" className="block text-gray-700 font-bold mb-2">
+            <div className="mb-2">
+              <label htmlFor="fileInput" className="block text-gray-700 font-bold mb-1">
                 Upload Image:
               </label>
               <input
@@ -219,7 +219,7 @@ const App = () => {
                 id="image"
                 accept="image/*"
                 onChange={handleImageChange}
-                className="shadow appearance-none border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none border rounded w-full py-0 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 {...register('image')}
               />
               {errors.fileInput && <p className="text-red-500 text-sm italic">{errors.fileInput.message}</p>}
@@ -227,13 +227,13 @@ const App = () => {
             <div className="flex items-center justify-between">
               <button
                 type="submit"
-                className="bg-black hover:bg-orange-500 active:bg-gray-900 text-white font-bold py-2 px-4 rounded-3xl focus:outline-none focus:shadow-outline transition ease-in-out duration-300 mb-2 sm:mb-0"
+                className="bg-black hover:bg-orange-500 active:bg-gray-900 text-white font-bold py-2 px-4 rounded-3xl focus:outline-none focus:shadow-outline transition ease-in-out duration-300 mt-1 mb-1 sm:mb-0"
               >
                 Submit
               </button>
               <button
                 type="button"
-                className="bg-black hover:bg-orange-500 active:bg-gray-900 text-white font-bold py-2 px-4 rounded-3xl focus:outline-none focus:shadow-outline transition ease-in-out duration-300 mb-2 sm:mb-0"
+                className="bg-black hover:bg-orange-500 active:bg-gray-900 text-white font-bold py-2 px-4 rounded-3xl focus:outline-none focus:shadow-outline transition ease-in-out duration-300 mt-1 mb-1 sm:mb-0"
                 onClick={handleClear}
               >
                 Clear
