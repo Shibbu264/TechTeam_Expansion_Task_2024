@@ -5,7 +5,7 @@ import './Navbar.css'
 const navbar = () => {
   return (
     <div className='flex justify-center items-center max-w-full h-[15vh] bg-white'>
-      <img className='w-[100px] p-[5px] lg:w-[130px]' src={logo} alt="logo" />
+      <img className='w-[150px] p-[5px] lg:w-[180px]' src={logo} alt="logo" />
     </div>
   )
 }
