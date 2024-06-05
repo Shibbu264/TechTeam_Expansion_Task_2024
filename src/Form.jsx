@@ -58,7 +58,7 @@ const Form = () => {
                         type="text"
                         {...register('name', { required: 'Name is required' })}
                     />
-                    {errors.name && <div className='self-center absolute text-center bg-white border border-red-500 rounded-[5px] text-red-500 lg:text-sm text-xs p-[5px] top-[100%]'>{errors.name.message}</div>}
+                    {errors.name && <div className='self-center absolute text-center bg-white rounded-[5px] text-red-500 lg:text-sm text-xs p-[5px] top-[100%]'>{errors.name.message}</div>}
                 </div>
 
                 <div className='flex flex-col lg:flex-row relative mx-[50px] gap-[10px]'>
@@ -69,7 +69,7 @@ const Form = () => {
                         type="text"
                         {...register('branch', { required: 'Branch is required' })}
                     />
-                    {errors.branch && <div className='self-center absolute text-center bg-white border border-red-500 rounded-[5px] text-red-500 lg:text-sm text-xs p-[5px] top-[100%]'>{errors.branch.message}</div>}
+                    {errors.branch && <div className='self-center absolute text-center bg-white rounded-[5px] text-red-500 lg:text-sm text-xs p-[5px] top-[100%]'>{errors.branch.message}</div>}
                 </div>
 
                 <div className='flex flex-col lg:flex-row relative mx-[50px] gap-[10px]'>
@@ -86,7 +86,7 @@ const Form = () => {
                             },
                         })}
                     />
-                    {errors.email && <div className='self-center absolute text-center bg-white border border-red-500 rounded-[5px] text-red-500 lg:text-sm text-xs p-[5px] top-[100%]'>{errors.email.message}</div>}
+                    {errors.email && <div className='self-center absolute text-center bg-white rounded-[5px] text-red-500 lg:text-sm text-xs p-[5px] top-[100%]'>{errors.email.message}</div>}
                 </div>
 
                 <div className='flex flex-col lg:flex-row relative mx-[50px] gap-[10px]'>
@@ -103,7 +103,7 @@ const Form = () => {
                             },
                         })}
                     />
-                    {errors.phone && <div className='self-center absolute text-center bg-white border border-red-500 rounded-[5px] text-red-500 lg:text-sm text-xs p-[5px] top-[100%]'>{errors.phone.message}</div>}
+                    {errors.phone && <div className='self-center absolute text-center bg-white rounded-[5px] text-red-500 lg:text-sm text-xs p-[5px] top-[100%]'>{errors.phone.message}</div>}
                 </div>
 
                 <div className='flex flex-col lg:flex-row relative'>
