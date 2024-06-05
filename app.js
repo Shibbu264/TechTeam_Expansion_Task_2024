@@ -57,17 +57,16 @@ function validatePhoneNumber(phoneNumber) {
             }
 
             const imageName = `${name}${branch}`;
-            const imageRef = ref(storage, imageName);
-            await uploadBytes(imageRef, imageFile);
+           
+            await uploadBytes(collectionRef, imageFile);
 
-            const imageURL = await getDownloadURL(imageRef);
-
+          
             const formdata = {
              name :   name,
              branch :  branch, 
              emailid  : emailid, 
              Phonenumber : Phonenumber,
-             image : imageURL
+             image : imageName
             };
             const docRef = await addDoc(collectionRef, formdata);
 
