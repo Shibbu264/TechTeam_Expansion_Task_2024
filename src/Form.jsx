@@ -108,7 +108,7 @@ const Form = () => {
 
                 <div className='flex flex-col lg:flex-row items-center relative'>
                     <label className='lg:text-lg text-center'>Image</label>
-                    <input className='text-md rounded-[5px]'
+                    <input className='text-md rounded-[5px] p-[2px]'
                         type="file"
                         {...register('image')}
                     />
