@@ -1,6 +1,6 @@
 # Project Description
 
-This project is a web application developed for handling form submissions from participants with E-cell design based UI. It provides a user-friendly web interface for participants to submit their details including their name, branch of study, email, phone number along with an optional image upload. The submitted data is then stored in a Firebase Firestore database organized into collections, and images are uploaded to Firebase Storage.
+This project is a web application developed for handling form submissions from participants with E-cell design based UI. It provides a user-friendly web interface for participants to submit their details including their name, branch of study, email, phone number along with an optional image upload. The submitted data is then stored in a Firebase Firestore database organized into collections, and images are uploaded to Firebase Storage. The Form is fully responsive and can be rendered across all devices. On submitting the form, the user access to Firebase database can access the form data.
 
 ## Techs Used
 
@@ -19,11 +19,14 @@ This project is a web application developed for handling form submissions from p
 ## Firebase Implementation
 
 - I have used Firebase Firestore database and Firebase Storage ,configured with Firebase SDK. I have used my own Firebase configuration by creating a project named "E-cell Form Task" in firebase console. 
-- You can check the implementation in your firebase project by changing the config file in [firebase.js](./form-project/src/firebase.js)
+- You can check the implementation in your firebase project by changing the config file in [firebase.js](./src/firebase.js)
 
 - You can watch the recording of the working of the firebase setup in storing the form data at Database and storage
-  [Click Here](https://drive.google.com/file/d/1EJN-wv6sAjYDM8iC6qB3TX63eN_rXYKt/view?usp=sharing)
+  [Recording](https://drive.google.com/file/d/1EJN-wv6sAjYDM8iC6qB3TX63eN_rXYKt/view?usp=sharing)
 
 ## Form page Screenshot
 
-- ![Form Page](form-project/public/Form.png)
+- ![Form Page](public/Form.png)
+
+## Form Deployed Site link
+-- Access my Form-Project here [Click](https://tech-team-expansion-task-2024-five.vercel.app/)
