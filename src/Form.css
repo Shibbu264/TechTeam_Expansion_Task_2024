@@ -1,0 +1,105 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 55vh;
+    width: 50%;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 50px;
+    margin-top: 70px;
+    gap: 30px;
+    position: relative;
+}
+
+.form h1{
+    align-self: center;
+}
+
+.form-items{
+    display: flex;
+    gap: 40px;
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.form-labels{
+    font-size: larger;
+    width: 150px;
+    padding: 5px;
+}
+
+.form-inputs{
+    width: 300px;
+    padding: 5px;
+    font-size: medium;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.error {
+    color: red;
+    font-size: small;
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    right: -95px;
+    z-index: 10;
+    width: 100px;
+    text-align: center;
+}
+
+.image-input{
+    width: 300px;
+    padding: 5px;
+    font-size: medium;
+    border-radius: 5px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(185, 185, 185);
+    height: 100vh;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.buttons input{
+    width: 100px;
+    padding: 10px;
+    border: 2px;
+    color: white;
+    border-radius: 10px;
+    background-color: orange;
+    font-size: 1rem;
+}
+
+.buttons button{
+    width: 100px;
+    padding: 10px;
+    border: 2px;
+    color: white;
+    border-radius: 10px;
+    background-color: orange;
+    font-size: 1rem;
+}
+
+.buttons input:hover{
+    background-color: rgb(141, 92, 1);
+    cursor: pointer;
+}
+
+.buttons button:hover{
+    background-color: rgb(141, 92, 1);
+    cursor: pointer;
+}
