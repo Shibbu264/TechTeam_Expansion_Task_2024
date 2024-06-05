@@ -47,36 +47,35 @@ const Form = () => {
 
     return (
         <>
-        <div className='container'>
-        
-            <form className='form' onSubmit={handleSubmit(onSubmit)}>
-            <h1>Form</h1>
-                <div className='form-items'>
-                    <label className='form-labels'>Name<span style={{color: 'red'}}>*</span></label>
+        <div className='flex justify-center bg-[#b9b9b9] h-[100vh] w-full min-h-screen py-20'>
+            <form className='flex flex-col justify-center items-center h-[80vh] max-w-[80vw] lg:max-w-[50vw] bg-white border-2 border-black rounded-[20px] relative min-w-[70vw] gap-[30px] p-[10px]' onSubmit={handleSubmit(onSubmit)}>
+                <h1 className='text-3xl font-extrabold'>Form</h1>
+                <div className='flex flex-col lg:flex-row relative mx-[50px] gap-[10px]'>
+                    <label className='lg:text-lg text-center'>Name<span style={{color: 'red'}}>*</span></label>
                     <input
-                        className='form-inputs'
+                        className='lg:text-md text-sm rounded-[5px] border-2 border-black'
                         placeholder='Enter your full name'
                         type="text"
                         {...register('name', { required: 'Name is required' })}
                     />
-                    {errors.name && <p className='error'>{errors.name.message}</p>}
+                    {errors.name && <div className='self-center absolute text-center bg-white border border-red-500 rounded-[5px] text-red-500 lg:text-sm text-xs p-[5px] top-[100%]'>{errors.name.message}</div>}
                 </div>
 
-                <div className='form-items'>
-                    <label className='form-labels'>Branch<span style={{color: 'red'}}>*</span></label>
+                <div className='flex flex-col lg:flex-row relative mx-[50px] gap-[10px]'>
+                    <label className='lg:text-lg text-center'>Branch<span style={{color: 'red'}}>*</span></label>
                     <input
-                        className='form-inputs'
+                        className='text-md rounded-[5px] border-2 border-black'
                         placeholder='Enter your branch'
                         type="text"
                         {...register('branch', { required: 'Branch is required' })}
                     />
-                    {errors.branch && <p className='error'>{errors.branch.message}</p>}
+                    {errors.branch && <div className='self-center absolute text-center bg-white border border-red-500 rounded-[5px] text-red-500 lg:text-sm text-xs p-[5px] top-[100%]'>{errors.branch.message}</div>}
                 </div>
 
-                <div className='form-items'>
-                    <label className='form-labels'>Email<span style={{color: 'red'}}>*</span></label>
+                <div className='flex flex-col lg:flex-row relative mx-[50px] gap-[10px]'>
+                    <label className='lg:text-lg text-center'>Email<span style={{color: 'red'}}>*</span></label>
                     <input
-                        className='form-inputs'
+                        className='text-md rounded-[5px] border-2 border-black'
                         placeholder='Enter your email'
                         type="email"
                         {...register('email', {
@@ -87,13 +86,13 @@ const Form = () => {
                             },
                         })}
                     />
-                    {errors.email && <p className='error'>{errors.email.message}</p>}
+                    {errors.email && <div className='self-center absolute text-center bg-white border border-red-500 rounded-[5px] text-red-500 lg:text-sm text-xs p-[5px] top-[100%]'>{errors.email.message}</div>}
                 </div>
 
-                <div className='form-items'>
-                    <label className='form-labels'>Phone Number<span style={{color: 'red'}}>*</span></label>
+                <div className='flex flex-col lg:flex-row relative mx-[50px] gap-[10px]'>
+                    <label className='lg:text-lg text-center'>Phone Number<span style={{color: 'red'}}>*</span></label>
                     <input
-                        className='form-inputs'
+                        className='text-md rounded-[5px] border-2 border-black'
                         placeholder='Enter your phone no.'
                         type="tel"
                         {...register('phone', {
@@ -104,20 +103,20 @@ const Form = () => {
                             },
                         })}
                     />
-                    {errors.phone && <p className='error'>{errors.phone.message}</p>}
+                    {errors.phone && <div className='self-center absolute text-center bg-white border border-red-500 rounded-[5px] text-red-500 lg:text-sm text-xs p-[5px] top-[100%]'>{errors.phone.message}</div>}
                 </div>
 
-                <div className='form-items'>
-                    <label className='form-labels'>Image</label>
-                    <input className='image-input'
+                <div className='flex flex-col lg:flex-row relative'>
+                    <label className='lg:text-lg text-center'>Image</label>
+                    <input className='text-md rounded-[5px] ml-[90px]'
                         type="file"
                         {...register('image')}
                     />
                 </div>
 
-                <div className="buttons">
-                <input type="submit" value="Submit" />
-                <button type="button" onClick={handleReset}>Reset</button>
+                <div className="flex justify-center gap-[5px]">
+                <input className='w-[80px] lg:w-[100px] p-[2px] lg:p-[10px] text-white rounded-[10px] bg-orange-500 lg:text-base text-xm hover:bg-[#8d5c01] cursor-pointer' type="submit" value="Submit" />
+                <button className='w-[80px] lg:w-[100px] p-[2px] lg:p-[10px] text-white rounded-[10px] bg-orange-500 lg:text-base text-xm hover:bg-[#8d5c01] cursor-pointer' type="button" onClick={handleReset}>Reset</button>
                 </div>
             </form>
         </div>

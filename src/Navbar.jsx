@@ -4,8 +4,8 @@ import './Navbar.css'
 
 const navbar = () => {
   return (
-    <div className='nav'>
-      <img src={logo} alt="logo" />
+    <div className='flex justify-center items-center max-w-full h-[15vh] bg-white'>
+      <img className='w-[100px] p-[5px] lg:w-[130px]' src={logo} alt="logo" />
     </div>
   )
 }
