@@ -22,4 +22,4 @@ This project is a web application developed for handling form submissions from p
 - You can check the implementation in your firebase project by changing the config file in [firebase.js](./form-project/src/firebase.js)
 
 - You can watch the working of the firebase setup in storing the form data at Database and storage
-  [Click Here](./form-project/public/recording.mp4)
+  [Click Here](https://drive.google.com/file/d/1EJN-wv6sAjYDM8iC6qB3TX63eN_rXYKt/view?usp=sharing)
