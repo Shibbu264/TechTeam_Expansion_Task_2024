@@ -47,7 +47,7 @@ const Form = () => {
 
     return (
         <>
-        <div className='flex justify-center bg-[#b9b9b9] h-[100vh] w-full min-h-screen py-20'>
+        <div className='flex justify-center bg-[#b9b9b9] h-[100vh] max-w-full min-h-screen py-20'>
             <form className='flex flex-col justify-center items-center h-[80vh] max-w-[80vw] lg:max-w-[50vw] bg-white border-2 border-black rounded-[20px] relative min-w-[70vw] gap-[30px] p-[10px]' onSubmit={handleSubmit(onSubmit)}>
                 <h1 className='text-3xl font-extrabold'>Form</h1>
                 <div className='flex flex-col lg:flex-row relative mx-[50px] gap-[10px]'>
@@ -106,9 +106,9 @@ const Form = () => {
                     {errors.phone && <div className='self-center absolute text-center bg-white rounded-[5px] text-red-500 lg:text-sm text-xs p-[5px] top-[100%]'>{errors.phone.message}</div>}
                 </div>
 
-                <div className='flex flex-col lg:flex-row relative'>
+                <div className='flex flex-col lg:flex-row items-center relative'>
                     <label className='lg:text-lg text-center'>Image</label>
-                    <input className='text-md rounded-[5px] ml-[90px]'
+                    <input className='text-md rounded-[5px]'
                         type="file"
                         {...register('image')}
                     />
