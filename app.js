@@ -56,17 +56,12 @@ function validatePhoneNumber(phoneNumber) {
                 throw new Error('Invalid phone number should be 10 digits');
             }
 
-            const imageName = `${name}${branch}`;
-           
-            await uploadBytes(collectionRef, imageFile);
-
           
             const formdata = {
              name :   name,
              branch :  branch, 
              emailid  : emailid, 
              Phonenumber : Phonenumber,
-             image : imageName
             };
             const docRef = await addDoc(collectionRef, formdata);
 
