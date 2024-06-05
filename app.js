@@ -1,7 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-analytics.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
-import { getStorage, ref, uploadBytes } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-storage.js";
+
 
 
 
@@ -19,7 +19,7 @@ const firebaseApp = initializeApp(firebaseConfig);
 const analytics = getAnalytics(firebaseApp);
 const firestore = getFirestore(firebaseApp);
 const collectionRef = collection(firestore, 'GyanajyotiPharma');
-const storage = getStorage(firebaseApp);
+
 
 
 function validateEmail(email) {
@@ -45,7 +45,7 @@ function validatePhoneNumber(phoneNumber) {
             const branch = getVal('branch');
             const emailid = getVal('emailid');
             const Phonenumber = getVal('Phonenumber');
-            const imageFile = document.getElementById('fileInput').files[0];
+          
 
            
             if (!validateEmail(emailid)) {
