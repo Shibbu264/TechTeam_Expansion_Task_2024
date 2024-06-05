@@ -1,4 +1,3 @@
-import '/src/App.css'
 import Navbar from "./Navbar.jsx";
 import Form from "./Form.jsx";
 

@@ -1,21 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useForm } from "react-hook-form"
 import { db, storage } from './firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-import './Form.css'
 
 const Form = () => {
     const {
         register,
         handleSubmit,
-        watch,
-        formState: { errors },
+        formState: { errors, isSubmitting },
         reset,
     } = useForm()
-
+    const [submitMessage, setsubmitMessage] = useState('');
 
     const onSubmit = async (data) => {
+        if (isSubmitting) return;
+
         const collectionName = `${data.name.split(' ')[0]}${data.branch.split(' ')[0]}`;
         let imageUrl = '';
 
@@ -34,22 +34,27 @@ const Form = () => {
                 email: data.email,
                 imageUrl: imageUrl,
             });
-            console.log('Document ID: ', docRef.id);
+            console.log('Doc ID: ', docRef.id);
+            setsubmitMessage('Form submitted successfully!!');
             reset();
         } catch (error) {
-            console.error('Error writing document: ', error);
+            console.error('Error: ', error);
+            setsubmitMessage('Error submitting form.');
+        } finally {
+            setTimeout(() => setsubmitMessage(''), 3000);
         }
     };
 
     const handleReset = () => {
         reset();
+        setsubmitMessage('');
     };
 
     return (
         <>
             <main className='flex justify-center bg-[#b9b9b9] h-[120vh] lg:h-[100vh] max-w-full min-h-screen py-20'>
-                <form className='flex flex-col justify-center items-center h-[100vh] lg:h-[80vh] max-w-[80vw] bg-white border-2 border-black rounded-[20px] lg:w-[50vw] gap-[30px] p-[10px]' onSubmit={handleSubmit(onSubmit)}>
-                    <h1 className='text-3xl font-extrabold mt-[20px]'>Form</h1>
+                <form className='flex flex-col justify-center items-center h-[100vh] lg:h-[85vh] max-w-[80vw] bg-white border-2 border-black rounded-[20px] lg:w-[50vw] gap-[25px] p-[10px]' onSubmit={handleSubmit(onSubmit)}>
+                    <h1 className='text-3xl font-extrabold mt-[10px]'>Form</h1>
                     <div className='flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 relative mx-[50px] gap-[10px] lg:w-[500px]'>
                         <label className='lg:text-lg text-center lg:text-left'>Name<span className='text-red-500'>*</span></label>
                         <input
@@ -115,9 +120,13 @@ const Form = () => {
                     </div>
 
                     <div className="flex justify-center lg:gap-[50px] gap-[30px]">
-                        <input className='w-[80px] lg:w-[100px] p-[2px] lg:p-[10px] text-white rounded-[10px] bg-orange-500 lg:text-lg text-xm hover:bg-[#8d5c01] cursor-pointer' type="submit" value="Submit" />
-                        <button className='w-[80px] lg:w-[100px] p-[2px] lg:p-[10px] text-white rounded-[10px] bg-orange-500 lg:text-lg text-xm hover:bg-[#8d5c01] cursor-pointer' type="button" onClick={handleReset}>Reset</button>
+                        <input className='w-[90px] lg:w-[120px] p-[2px] lg:p-[10px] text-white rounded-[10px] bg-orange-500 lg:text-lg text-xm hover:bg-[#8d5c01] cursor-pointer'disabled={isSubmitting} type="submit" value={isSubmitting ? "Submiting.." : "Submit"}
+                        />
+                        <button className='w-[90px] lg:w-[120px] p-[2px] lg:p-[10px] text-white rounded-[10px] bg-orange-500 lg:text-lg text-xm hover:bg-[#8d5c01] cursor-pointer' type="button" onClick={handleReset}>Reset</button>
                     </div>
+
+                    <div className='text-center text-black lg:text-md text-sm h-[15px]'>{isSubmitting && 'Loading...'}</div>
+                    {submitMessage && alert(submitMessage)}
                     <div className='text-center mb-[10px]'><span className='text-red-500'>*</span> Fields marked with an asterisk are mandatory</div>
                 </form>
             </main>
