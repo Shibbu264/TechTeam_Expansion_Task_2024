@@ -1,29 +1,59 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import './App.css';
 import {useForm} from 'react-hook-form';
-import {db} from './firebase.js'
+import { db, storage, analytics } from './firebase.js'
 import { collection, addDoc } from 'firebase/firestore';
+import { ref, uploadBytes } from 'firebase/storage';
 
 
 const App = () => {
-  const { register, handleSubmit, reset, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm();
+
+  const delay = (d) =>{
+    return new Promise((resolve, reject)=>{
+      setTimeout(() => {
+        resolve()
+      }, d * 1000);
+    })
+  }
+
+  const [image, setImage] = useState(null);
 
   const onSubmit = async (data) => {
+    delay(3)
     console.log('Submitted data:', data);
 
-    // Creating collection name
     const collectionName = `${data.name.split(' ')[0]}${data.branch.split(' ')[0]}`;
-    console.log(collectionName)
+    console.log(`Name of the created collection: ${collectionName}`);
+
     try {
-      await addDoc(collection(db, collectionName), data);
-      alert('Data submitted successfully!');
+      const docRef = await addDoc(collection(db, collectionName), {
+        name: data.name,
+        branch: data.branch,
+        email: data.email,
+        phoneNumber: data.phoneNumber,
+      });
+      
+      if (data.image) {
+        const imageFile = data.image[0];
+        const storageRef = ref(storage, `${collectionName}/${docRef.id}/${imageFile.name}`);
+        await uploadBytes(storageRef, imageFile);
+        console.log('Image uploaded successfully.');
+      }
+
+      alert('Data submitted successfully and added to the Firebase Database!');
     } catch (error) {
       console.error('Error adding document: ', error);
     }
   };
 
+  const handleImageChange = (e) => {
+    setImage(e.target.files[0]);
+  };
+
   const handleClear = () => {
     reset();
+    setImage(null);
   };
 
   return (
@@ -79,7 +109,7 @@ const App = () => {
                 })}
               >
                 <option value="">Click to Select Branch </option>
-                <option value="Biochemical/Biomedical Engineering">
+                <option value="Biochemical-Biomedical Engineering">
                   Biochemical/Biomedical Engineering
                 </option>
                 <option value="Pharmaceutical Engineering">
@@ -92,7 +122,7 @@ const App = () => {
                   Industrial Chemistry
                 </option>
                 <option value="Ceramic Engineering">Ceramic Engineering</option>
-                <option value="Material Sciences and Technology">
+                <option value="Material-Sciences and Technology">
                   Material Sciences and Technology
                 </option>
                 <option value="Metallurgical Engineering">
@@ -102,7 +132,7 @@ const App = () => {
                 <option value="Computer science Engineering">
                   Computer Science Engineering
                 </option>
-                <option value="Mathematics and Computing">
+                <option value="MNC (Mathematics and Computing)">
                   Mathematics and Computing
                 </option>
                 <option value="Civil Engineering">Civil Engineering</option>
@@ -115,7 +145,7 @@ const App = () => {
                 <option value="Electronics Engineering">
                   Electronics Engineering
                 </option>
-                <option value="Engineering Physics">Engineering Physics</option>
+                <option value="EP (Engineering Physics)">Engineering Physics</option>
                 <option value="Architecture & Planning">
                   Architecture & Planning
                 </option>
@@ -180,7 +210,20 @@ const App = () => {
                   {errors.phoneNumber.message}
                 </p>}
             </div>
-
+            <div className="mb-4">
+              <label htmlFor="fileInput" className="block text-gray-700 font-bold mb-2">
+                Upload Image:
+              </label>
+              <input
+                type="file"
+                id="image"
+                accept="image/*"
+                onChange={handleImageChange}
+                className="shadow appearance-none border rounded w-full py-2 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                {...register('image')}
+              />
+              {errors.fileInput && <p className="text-red-500 text-sm italic">{errors.fileInput.message}</p>}
+            </div>
             <div className="flex items-center justify-between">
               <button
                 type="submit"
@@ -196,6 +239,7 @@ const App = () => {
                 Clear
               </button>
             </div>
+            {isSubmitting && <div>Submitting... This may take a while</div>}
           </form>
         </div>
       </div>
