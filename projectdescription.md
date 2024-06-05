@@ -21,5 +21,9 @@ This project is a web application developed for handling form submissions from p
 - I have used Firebase Firestore database and Firebase Storage ,configured with Firebase SDK. I have used my own Firebase configuration by creating a project named "E-cell Form Task" in firebase console. 
 - You can check the implementation in your firebase project by changing the config file in [firebase.js](./form-project/src/firebase.js)
 
-- You can watch the working of the firebase setup in storing the form data at Database and storage
+- You can watch the recording of the working of the firebase setup in storing the form data at Database and storage
   [Click Here](https://drive.google.com/file/d/1EJN-wv6sAjYDM8iC6qB3TX63eN_rXYKt/view?usp=sharing)
+
+## Form page Screenshot
+
+- ![Form Page](form-project/public/Form.png)
