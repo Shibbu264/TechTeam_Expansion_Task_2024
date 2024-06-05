@@ -35,14 +35,14 @@ signupForm.addEventListener('submit', (e) => {
     }
     const userCredential =createUserWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
-        try{
+        try{ 
         const docRef = addDoc(collection(db, name + branch), {
-            name: name,
-            branch: branch,
-            email: email,
-            phonenumber: phonenumber,
+            name: signupForm.name.value,
+            branch: signupForm.branch.value,
+            email: signupForm.email.value,
+            phonenumber: signupForm.phonenumber.value,
             createdAt: serverTimestamp()
-        });
+        }); 
         if (image) {
             const imageRef = ref(storage, 'images/' + name + branch + '/' + image.name);
             uploadBytes(imageRef, image);
