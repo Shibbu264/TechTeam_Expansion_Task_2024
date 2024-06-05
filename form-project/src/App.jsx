@@ -1,12 +1,25 @@
 import React, { useState } from 'react';
 import './App.css';
 import {useForm} from 'react-hook-form';
+import {db} from './firebase.js'
+import { collection, addDoc } from 'firebase/firestore';
+
 
 const App = () => {
   const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
-  const onSubmit = data => {
+  const onSubmit = async (data) => {
     console.log('Submitted data:', data);
+
+    // Creating collection name
+    const collectionName = `${data.name.split(' ')[0]}${data.branch.split(' ')[0]}`;
+    console.log(collectionName)
+    try {
+      await addDoc(collection(db, collectionName), data);
+      alert('Data submitted successfully!');
+    } catch (error) {
+      console.error('Error adding document: ', error);
+    }
   };
 
   const handleClear = () => {
