@@ -19,7 +19,7 @@ var filename;
 function getfile(e){
     fileitem=e.target.files[0];
     filename=fileitem.name;
-    filetext.innerHTML=filename;
+    // filetext.innerHTML=filename;
 
 }
 
