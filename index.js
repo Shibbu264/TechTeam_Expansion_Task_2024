@@ -34,9 +34,9 @@
         return;
     }
     function validateEmail(email) {
-        const emailPattern = /.+@.+/;
+        const emailPattern = /.+@gmail\.com/;
         return emailPattern.test(email);
-    }  
+    } 
       function validatePhoneNumber(phonenumber) {
         const phonePattern = /^\d{10}$/;
         return phonePattern.test(phonenumber);
@@ -45,7 +45,7 @@
         return password.length >= 6;
       }
       if (!validateEmail(email)) {
-        document.getElementById('message').textContent = 'Please enter a valid email address';
+        document.getElementById('message').textContent = 'Please enter a valid email address,for example: task@gmail.com';
         return;
       }
       if (!validatePhoneNumber(phonenumber)) {
