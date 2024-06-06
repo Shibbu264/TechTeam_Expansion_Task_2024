@@ -21,9 +21,9 @@ This project is a react app  which is created to register details of Students.Th
 - here is the screenshot of the firestore database collections.
   ![Firestore](./public/Screenshot%202024-06-06%20101626.png)
 
--here is the screenshot of the app.
+- here is the screenshot of the app.
   ![Image](./public/form_page.png)  
 
 ## Form site link
-- [Form](https://tech-team-expansion-form-task-2024.vercel.app/)
+- Link: [Form](https://tech-team-expansion-form-task-2024.vercel.app/)
 - firebase console link : [Firebase Console](https://console.firebase.google.com/project/form-task-5bb7c/overview)
