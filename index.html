@@ -11,28 +11,28 @@
     <form class="signup" id="participantForm">
       <h2>Participant Form</h2>
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name"  placeholder="Enter you name">
 
       <label for="branch">Branch:</label>
-      <input type="text" id="branch" name="branch" required>
+      <input type="text" id="branch" name="branch"  placeholder="Enter your branch">
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email"  placeholder="Enter Email">
 
       <label for="phonenumber">Phone Number:</label>
-      <input type="tel" id="phonenumber" name="phonenumber" required>
-
-      <label for="password">Password:</label> <!-- Adding a password field for authentication -->
-      <input type="password" id="password" name="password" required>
-
+      <input type="tel" id="phonenumber" name="phonenumber" placeholder="123 456 7890" >
+      <label for="password">Password:</label> 
+      <input type="password" id="password" name="password" >
       <label for="image">Upload Image:</label>
       <input type="file" id="image" name="image" accept="image/*">
 
-      <button type="submit">Submit</button>
+      <button type="submit">Submit</button> 
     </form>
     <p id="message"></p>
+    <ul id="submittedData"></ul>
   </div>
-  <script type="module" src="bundle.js"></script>
+  <script src="index.js" type="module">
+  </script>
 </body>
 </html>
 
