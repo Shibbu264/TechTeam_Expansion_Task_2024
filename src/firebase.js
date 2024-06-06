@@ -1,9 +1,3 @@
-# TechTeam Expansion Task 2024
-
-deployed link: https://tech-team-expansion-task-2024-grf40s3c4-pratham-seths-projects.vercel.app/
-
-In this project I have used my own config rather than the one provided here is the snipet of my firebase.js file 
-```
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage"
@@ -21,13 +15,3 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const storage = getStorage(app)
-```
-find below the video demonstration of the form
-
-<hr>
-
-
-
-https://github.com/PrathamX595/TechTeam_Expansion_Task_2024/assets/143347368/744e3041-d230-4c70-8fc7-be035536e52c
-
-
