@@ -9,7 +9,7 @@ type formValues = {
   name: string;
   Branch: string;
   Email: string;
-  Phone: number;
+  Phone: string;
 };
 
 export const form = () => {
@@ -18,7 +18,7 @@ export const form = () => {
       name: "",
       Branch: "",
       Email: "",
-      Phone: 0,
+      Phone: "",
     },
   });
   const { register, control, handleSubmit, formState, reset } = Form;
