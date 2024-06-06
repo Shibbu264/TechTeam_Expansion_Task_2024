@@ -82,9 +82,11 @@ signupForm.addEventListener('submit', (e) => {
                 console.log('Image URL:', imageURL);
             } 
             displaySubmittedData({ name, branch, email, phonenumber });
-            signupForm.reset(); 
+            
                 document.getElementById('message').textContent = 'Form submitted successfully!';
-               
+               signupForm.reset();
+               document.getElementById('message').textContent = '';
+               submittedDataList.innerHTML = '';
                
         } 
 
