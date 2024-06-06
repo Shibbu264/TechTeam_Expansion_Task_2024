@@ -58,7 +58,7 @@ const Form = () => {
                     <div className='flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 relative mx-[50px] gap-[10px] lg:w-[500px]'>
                         <label className='lg:text-lg text-center lg:text-left'>Name<span className='text-red-500'>*</span></label>
                         <input
-                            className='text-md rounded-[5px] border-2 border-black p-[3px]'
+                            className='text-md text-center lg:text-left rounded-[5px] border-2 border-black p-[3px] w-[70vw] lg:w-[20vw]'
                             placeholder='Enter your full name'
                             type="text"
                             {...register('name', { required: 'Name is required' })}
@@ -69,7 +69,7 @@ const Form = () => {
                     <div className='flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 relative mx-[50px] gap-[10px] lg:w-[500px]'>
                         <label className='lg:text-lg text-center lg:text-left'>Branch<span className='text-red-500'>*</span></label>
                         <input
-                            className='text-md rounded-[5px] border-2 border-black p-[3px]'
+                            className='text-md text-center lg:text-left rounded-[5px] border-2 border-black p-[3px] w-[70vw] lg:w-[20vw]'
                             placeholder='Enter your branch'
                             type="text"
                             {...register('branch', { required: 'Branch is required' })}
@@ -80,7 +80,7 @@ const Form = () => {
                     <div className='flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 relative mx-[50px] gap-[10px] lg:w-[500px]'>
                         <label className='lg:text-lg text-center lg:text-left'>Email<span className='text-red-500'>*</span></label>
                         <input
-                            className='text-md rounded-[5px] border-2 border-black p-[3px]'
+                            className='text-md text-center lg:text-left rounded-[5px] border-2 border-black p-[3px] w-[70vw] lg:w-[20vw]'
                             placeholder='Enter your email'
                             type="email"
                             {...register('email', {
@@ -97,7 +97,7 @@ const Form = () => {
                     <div className='flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 relative mx-[50px] gap-[10px] lg:w-[500px]'>
                         <label className='lg:text-lg text-center lg:text-left'>Phone Number<span className='text-red-500'>*</span></label>
                         <input
-                            className='text-md rounded-[5px] border-2 border-black p-[3px]'
+                            className='text-md text-center lg:text-left rounded-[5px] border-2 border-black p-[3px] w-[70vw] lg:w-[20vw]'
                             placeholder='Enter your phone no.'
                             type="tel"
                             {...register('phone', {
@@ -113,7 +113,7 @@ const Form = () => {
 
                     <div className='flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 relative mx-[50px] gap-[10px] lg:w-[500px]'>
                         <label className='lg:text-lg lg:text-left text-center'>Image</label>
-                        <input className='text-md rounded-[5px] p-[2px] w-[200px] lg:w-[240px]'
+                        <input className='text-md rounded-[5px] p-[2px] w-[250px] lg:w-[240px]'
                             type="file"
                             {...register('image')}
                         />
