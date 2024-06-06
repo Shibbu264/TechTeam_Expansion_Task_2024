@@ -11,7 +11,7 @@ This project is a react app  which is created to register details of Students.Th
 - Git
 - React-Hook-Form
 
-##Firebase
+## Firebase
 - I have used my own Firebase configuration by creating a project named "Form-Task" in firebase console. 
 - You can check the implementation in your firebase project by changing the config file in [firebase.tsx](./src/firebase.tsx)
 
