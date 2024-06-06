@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { useForm } from "react-hook-form"
 import { db, storage } from './firebase';
 import { collection, addDoc } from 'firebase/firestore';
@@ -120,7 +120,7 @@ const Form = () => {
                     </div>
 
                     <div className="flex justify-center lg:gap-[50px] gap-[30px]">
-                        <input className='w-[90px] lg:w-[120px] p-[2px] lg:p-[10px] text-white rounded-[10px] bg-orange-500 lg:text-lg text-xm hover:bg-[#8d5c01] cursor-pointer'disabled={isSubmitting} type="submit" value={isSubmitting ? "Submitting..." : "Submit"}
+                        <input className='w-[90px] lg:w-[120px] p-[2px] lg:p-[10px] text-white rounded-[10px] bg-orange-500 lg:text-lg text-xm hover:bg-[#8d5c01] cursor-pointer' disabled={isSubmitting} type="submit" value={isSubmitting ? "Submitting..." : "Submit"}
                         />
                         <button className='w-[90px] lg:w-[120px] p-[2px] lg:p-[10px] text-white rounded-[10px] bg-orange-500 lg:text-lg text-xm hover:bg-[#8d5c01] cursor-pointer' type="button" onClick={handleReset}>Reset</button>
                     </div>
