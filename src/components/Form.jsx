@@ -53,7 +53,7 @@ const Form = () => {
     return (
         <>
             <main className='flex justify-center bg-[#b9b9b9] h-[120vh] lg:h-[100vh] max-w-full min-h-screen py-20'>
-                <form className='flex flex-col justify-center items-center h-[100vh] lg:h-[85vh] max-w-[90vw] bg-white border-2 border-black rounded-[20px] lg:w-[50vw] lg:gap-[25px] gap-[15px] p-[10px]' onSubmit={handleSubmit(onSubmit)}>
+                <form className='flex flex-col justify-center items-center max-h-[100vh] lg:h-[85vh] max-w-[90vw] bg-white border-2 border-black rounded-[20px] lg:w-[50vw] gap-[22px] p-[10px]' onSubmit={handleSubmit(onSubmit)}>
                     <h1 className='text-3xl font-extrabold lg:mt-[10px] mt-[5px]'>Form</h1>
                     <div className='flex flex-col lg:grid lg:grid-cols-2 lg:gap-4 relative mx-[50px] gap-[10px] lg:w-[500px]'>
                         <label className='lg:text-lg text-center lg:text-left'>Name<span className='text-red-500'>*</span></label>
@@ -127,7 +127,7 @@ const Form = () => {
 
                     <div className='text-center text-black lg:text-md text-sm h-[15px]'>{isSubmitting && 'Loading...'}</div>
                     {submitMessage && alert(submitMessage)}
-                    <div className='text-center lg:mb-[10px] mb-[5px]'><span className='text-red-500'>*</span> Fields marked with an asterisk are mandatory</div>
+                    <div className='text-center mb-[10px]'><span className='text-red-500'>*</span> Fields marked with an asterisk are mandatory</div>
                 </form>
             </main>
         </>
