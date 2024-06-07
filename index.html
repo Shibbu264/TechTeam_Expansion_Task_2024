@@ -18,7 +18,7 @@
           <form action="" id="firstform">
             <div class="b2">
               <div class="can1"> <label for="username">Name :</label></div>
-              <div class="can2"> <input type="text" name="username" id="username" required placeholder="Enter your name"></div>
+              <div class="can2"> <input type="text" name="username" pattern="[A-Za-z]" maxlength="32" id="username" required placeholder="Enter your name"></div>
              
            </div>
            <div class="b3">
@@ -28,12 +28,12 @@
            </div>
            <div class="b4">
                <div class="can1"> <label for="gmail">Email :</label></div>
-              <div class="can2"> <input type="email" name="gmail" id="gmail" required placeholder="Enter your gmail"></div>
+              <div class="can2"> <input type="email" name="gmail" id="gmail" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required placeholder="Enter your gmail"></div>
              
            </div>
            <div class="b5">
                <div class="can1"> <label for="mobile">Mobile :</label></div>
-               <div class="can2"> <input type="tel" name="mobile" id="mobile" required  placeholder="Enter phone no."></div>
+               <div class="can2"> <input type="tel" name="mobile" id="mobile" required pattern="[0-9]{10}" placeholder="Enter phone no."></div>
               
            </div>
            <div class="b6">
