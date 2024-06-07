@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>E-Cell Tech Team Expansion</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container" id="container">
+		<div class="form-container">
+		<form action="#">
+			<h1><img src="https://www.ecelliitbhu.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FEcell-logo.2af076de.png&w=256&q=75" width="180px" height="80px" ></h1>
+			<input type="text" id="name" placeholder="Name" />
+			<input type="email" id="email" placeholder="Email" required />
+			<input type="text" id="branch" placeholder="Branch" />
+			<input type="number" id="mobile" placeholder="Mobile" pattern="\d{10}" minlength="10" maxlength="10" required>
+      <input type="file" id="myFile" name="#photo">
+      <button id="submit">Submit</button>
+		</form>
+	</div>
+</div>
+<script type="module">
+	//Import the functions you need from the SDKs you need
+	import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+	import { getDatabase, ref, set, get, child} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+	import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-storage.js";
+
+	
+	  // Your web app's Firebase configuration
+	  const firebaseConfig = {
+		apiKey: "AIzaSyDU9y7KPX23NTa0ZvF3xV72Gf8IuJV054c",
+		authDomain: "collectinfo-11f2a.firebaseapp.com",
+		projectId: "collectinfo-11f2a",
+		storageBucket: "collectinfo-11f2a.appspot.com",
+		messagingSenderId: "628701568996",
+		appId: "1:628701568996:web:308bb14303e0d0a9c9f1f1"
+	  };
+	
+	  const app = initializeApp(firebaseConfig);
+	  const db = getDatabase(app);
+	  const storage = getStorage(app);
+
+	  
+	
+	document.getElementById("submit").addEventListener('click', function(e){
+		const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const branch = document.getElementById('branch').value;
+    const mobile = document.getElementById('mobile').value;
+	const file = document.getElementById('myFile').files[0];
+
+	const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    // Mobile pattern to check for exactly 10 digits
+    const mobilePattern = /^\d{10}$/;
+
+    // Validate email
+    if (!emailPattern.test(email)) {
+      alert('Please enter a valid email address.');
+      return false;
+    }
+
+    // Validate mobile number
+    if (!mobilePattern.test(mobile)) {
+      alert('Please enter a valid 10-digit mobile number.');
+      return false;
+    }
+	const firstName = name.split(' ')[0];
+	const firstBranchWord = branch.split(' ')[0];
+	const collectionName = `${firstName}${firstBranchWord}`;
+	const storagePath = `images/${collectionName}/${file.name}`;
+    const storageRefInstance = storageRef(storage, storagePath);
+	uploadBytes(storageRefInstance, file);
+	const downloadURL = getDownloadURL(storageRefInstance);
+		set(ref(db, 'user/'+collectionName),
+	{
+		username: name,
+		email: email,
+		branch: branch, 
+		mobile: mobile,
+		photoURL: downloadURL
+
+	}
+
+);
+	alert("Registered Successfully !")
+	})
+	</script>
+
+</body>
+</html>
