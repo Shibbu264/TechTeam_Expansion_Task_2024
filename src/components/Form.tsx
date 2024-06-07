@@ -3,6 +3,10 @@
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import db from "../firebase";
+import { storage } from "../firebase";
+
+
+
 
 
 type formValues = {
@@ -35,11 +39,19 @@ export const form = () => {
     );alert("Form Submitted Successfully");
     await reset();
   }
+  const handleChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const storageRef = storage.ref();
+      const fileRef = storageRef.child(file.name);
+      await fileRef.put(file);
+    }
+  }
   return (
     <div>
       <form className="form" onSubmit={handleSubmit(onSubmit)} noValidate>
         <div className="blackbox">
-          <h1>Registration Form</h1>
+          <h1>E-cell Registration Form</h1>
           <label>
             Name :
             <input
@@ -104,6 +116,13 @@ export const form = () => {
               placeholder="Enter your Phone number..."
             />
             <p className="errormessages">{errors.Phone?.message}</p>
+          </label>
+          <label >
+            <input type="file" id="file" onChange={handleChange} />
+            <label htmlFor="file" className="filelabel">
+              Upload Data
+            </label>
+            
           </label>
 
           <br />

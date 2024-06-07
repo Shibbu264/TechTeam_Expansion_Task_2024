@@ -1,4 +1,8 @@
 import firebase from "firebase";
+//add firebase storage for image upload
+import "firebase/storage";
+
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyCgotbZRgqKXNbKLO_aU_qAZ6usy0mLIHA",
@@ -16,5 +20,7 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
+const storage = firebase.storage();
 
-export default db;
+export { storage };
+export { db as default };

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Set max-width and center align the root element */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -6,6 +8,7 @@
   text-align: center;
 }
 
+/* Adjust logo height and padding */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -19,6 +22,7 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* Define keyframes for logo spin animation */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -28,37 +32,49 @@
   }
 }
 
+/* Apply logo spin animation only if prefers-reduced-motion is not set */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
 }
-h1{
-  font-family: "poppins",sans-serif;
+
+/* Adjust margin for file label */
+.filelabel {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+/* Adjust padding for h1 */
+h1 {
+  font-family: "poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
   padding-left: 50px;
   padding-right: 50px;
 }
+
+/* Adjust padding for card */
 .card {
   padding: 2em;
-  
 }
-body{
-  background:linear-gradient(150deg,#F8345F,#5E35B0);
+
+/* Set background gradient for body */
+body {
+  background: linear-gradient(150deg, #F8345F, #5E35B0);
 }
+
+/* Adjust color for read-the-docs class */
 .read-the-docs {
   color: #888;
 }
-.form{
+
+/* Adjust styles for form */
+.form {
   box-shadow: 5px 20px 50px rgba(49, 49, 49, 0.724);
-  background:linear-gradient(90deg,#B02E2F,#1F61B6);
-  border:none;
+  background: linear-gradient(90deg, #B02E2F, #1F61B6);
+  border: none;
   padding: 1em;
-  padding-left: 20em;
-  padding-right: 20em;
-  padding-top: 1em;
-  padding-bottom: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,8 +82,10 @@ body{
   margin-top: 1em;
   font-size: 14px;
 }
-label{
-  font-family: "poppins",sans-serif;
+
+/* Adjust styles for label */
+label {
+  font-family: "poppins", sans-serif;
   font-weight: 300;
   font-style: normal;
   display: flex;
@@ -77,7 +95,9 @@ label{
   justify-content: space-evenly;
   gap: -5px;
 }
-input{
+
+/* Adjust styles for input */
+input {
   font-family: Arial, Helvetica, sans-serif;
   border: 1px solid #888;
   border-radius: 25px;
@@ -86,17 +106,18 @@ input{
   width: 20vw;
   border-color: #4B7393;
   border-width: 2px;
-  
 }
-.errormessages{
+
+/* Adjust styles for error messages */
+.errormessages {
   color: red;
   font-size: smaller;
   display: flex;
   justify-content: start;
-  
-  
 }
-.blackbox{
+
+/* Adjust styles for black box */
+.blackbox {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,10 +128,51 @@ input{
   margin-top: 2em;
   margin-bottom: 0%;
 }
-.submitbut{
+
+/* Adjust styles for submit button */
+.submitbut {
   margin-bottom: 10px;
   margin-top: -10px;
   border-radius: 50px;
   border-color: #6ead86;
-  border-width: 2px; 
+  border-width: 2px;
+}
+
+/* Responsive Styles */
+
+/* Adjust padding for h1 on smaller screens */
+@media (max-width: 768px) {
+  h1 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Adjust padding for card on smaller screens */
+@media (max-width: 768px) {
+  .card {
+    padding: 1em;
+  }
+}
+
+/* Adjust font size for form on smaller screens */
+@media (max-width: 768px) {
+  .form {
+    font-size: 12px;
+  }
+}
+
+/* Adjust width for input on smaller screens */
+@media (max-width: 768px) {
+  input {
+    width: 100%;
+  }
+}
+
+/* Adjust margin for black box on smaller screens */
+@media (max-width: 768px) {
+  .blackbox {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }
