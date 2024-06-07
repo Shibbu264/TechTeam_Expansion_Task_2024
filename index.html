@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-cell Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <header>
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="https://www.ecelliitbhu.com/" class="logo">
+                        <div class="images">
+                            <img src="./images/1_lgBGhsy_78qkfsAC4XuLSw@2x.png" class="Logo-For-Light" title="E-Cell">
+                            <img src="./images/ecell_logo.png" class="Logo-For-Dark" title="E-Cell">
+                        </div>
+                        <!-- <h2>E-Cell <span>.</span></h2> -->
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.ecelliitbhu.com/" class="nav-link">Home</a>
+                </li>
+               
+                <li>
+                    <span class="nav-link theme-toogle">
+                        <i class="fa-solid fa-sun"></i>
+                        <i class="fa-solid fa-moon"></i>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact">
+            <div class="container">
+                <div class="left">
+                    <div class="form-wrapper">
+                        <div class="contact-heading">
+                            <h1>Welcome to the E-cell<span>.</span> </h1>
+                            <p class="text">Let's connect with each other!</p>
+                        </div>
+
+                        <form action="index.html" method="post" class="contact-form">
+                            <div class="input-wrap">
+                                <input type="text" autocomplete="off" name="FirstName" class="contact-input same" required>
+                                <label>First Name</label>
+                                <i class="icon fa-solid fa-id-card"></i>
+                            </div>
+                            <div class="input-wrap">
+                                <input type="text" autocomplete="off" name="LastName" class="contact-input same" required>
+                                <label>Last Name</label>
+                                <i class="icon fa-solid fa-id-card"></i>
+                                </div>
+                            <div class="input-wrap w-100">
+                                <input type="text" autocomplete="off" name="Branch" class="contact-input same" required>
+                                <label>Branch</label>
+                                <i class="icon fa-solid fa-user-gear"></i>
+                            </div>
+                            <div class="input-wrap w-100">
+                                <input type="email" autocomplete="off" name="Email" class="contact-input" id="email" required>
+                                <label>Email</label>
+                                <i class="icon fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="input-wrap w-100" >
+                                <input type="tel" autocomplete="off" name="Tel" class="contact-input" id="phoneNo" required>
+                                <label>Phone No.</label>
+                                <i class="icon fa-solid fa-phone"></i>
+                            </div>
+
+                            <div class="contact-buttons">
+                                <button class="btn upload">
+                                    <span><i class="fa-solid fa-paperclip"></i>Add Image</span>
+                                    <input type="file" name="attachment">
+                                </button>
+                                <input type="submit" value="submit" class="btn" id="submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="image-wrapper">
+                        <img src="./images/Screenshot 2024-06-05 232344.png" class="img">
+                        <div class="wave-wrap">
+                            <svg class="wave" viewBox="0 0 783 1536" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path id="wave" d="M236.705 1356.18C200.542 1483.72 64.5004 1528.54 1 1535V1H770.538C793.858 63.1213 797.23 196.197 624.165 231.531C407.833 275.698 274.374 331.715 450.884 568.709C627.393 805.704 510.079 815.399 347.561 939.282C185.043 1063.17 281.908 1196.74 236.705 1356.18Z" />
+                                </svg>
+                                
+                        </div>
+                        <svg  class="dashed-wave" viewBox="0 0 345 877" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="dashed-wave" d="M0.5 876C25.6667 836.167 73.2 739.8 62 673C48 589.5 35.5 499.5 125.5 462C215.5 424.5 150 365 87 333.5C24 302 44 237.5 125.5 213.5C207 189.5 307 138.5 246 87C185 35.5 297 1 344.5 1"/>
+                            </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+
+    <script src="ecell.js"></script>
+     
+
+    <!-- test: for realtime db -->
+    <!-- <script type="module" defer>
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js';
+        import { ref, set, child, getDatabase, onValue, get, push, update } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js';
+        import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js';
+        
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBdJ5wPXm15G-gK4t0qYcNKN1IBDGPw9BY",
+          authDomain: "mayank-dfec0.firebaseapp.com",
+          databaseURL: "https://mayank-dfec0-default-rtdb.firebaseio.com",
+          projectId: "mayank-dfec0",
+          storageBucket: "mayank-dfec0.appspot.com",
+          messagingSenderId: "275743582557",
+          appId: "1:275743582557:web:98f434940c4e8798b260b4",
+          measurementId: "G-2DGFW6JYL9"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        document.querySelector('.contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+        
+            // Your JavaScript code to handle the form submission
+            const firstName = document.querySelector('input[name="FirstName"]').value;
+            const lastName = document.querySelector('input[name="LastName"]').value;
+            const branch = document.querySelector('input[name="Branch"]').value;
+            const email = document.querySelector('input[name="Email"]').value;
+            const phoneNo = document.querySelector('input[name="Tel"]').value;
+        
+            // Example: Sending data to Firebase
+            const database = getDatabase();
+            const reference = ref(database, 'users/' + firstName);
+            set(reference, {
+                firstName: firstName+lastName+branch,
+                lastName: lastName,
+                branch: branch,
+                email: email,
+                phoneNo: phoneNo
+            }).then(() => {
+                alert('Logged in successfully!');
+            }).catch((error) => {
+                alert('Error saving data: ' + error.message);
+            });
+        });
+      </script> -->
+
+      
+      
+      <script type="module" defer>
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js';
+        import { getFirestore, doc, setDoc, collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js';
+        import { ref, set, child, getDatabase, onValue, get, push, update } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js';
+        import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js';
+        import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js';
+        
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyCdKthmN5V1tKXJ5vlMxbqc1L4o4clEKj4",
+            authDomain: "techteamtask2024.firebaseapp.com",
+            projectId: "techteamtask2024",
+            storageBucket: "techteamtask2024.appspot.com",
+            messagingSenderId: "1067539417498",
+            appId: "1:1067539417498:web:cb7f4bf39e824524ce1223",
+            measurementId: "G-76JGN8JWVE"
+          };
+      
+        // Initializing Firebase
+        const app = initializeApp(firebaseConfig);
+        
+
+        const db= getFirestore();
+
+        const storage = getStorage();
+
+        document.querySelector('.contact-form').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent the default form submission
+        
+            //  code to handle the form submission
+            const firstName = document.querySelector('input[name="FirstName"]').value;
+            const lastName = document.querySelector('input[name="LastName"]').value;
+            const branch = document.querySelector('input[name="Branch"]').value;
+            const email = document.querySelector('input[name="Email"]').value;
+            const phoneNo = document.querySelector('input[name="Tel"]').value;
+            const fileInput = document.querySelector('input[name="attachment"]');
+            const file= fileInput.files[0];
+
+            let fileURL = '';
+
+            if (file) {
+                // Upload file to Firebase Storage
+                const storageReference = storageRef(storage, 'attachments/' + file.name);
+                await uploadBytes(storageReference, file);
+                fileURL = await getDownloadURL(storageReference);
+            }
+
+            
+            const reference = doc(db, "users" ,document.getElementById("phoneNo").value);
+            await setDoc(reference, {
+                NameBranch: firstName+lastName+branch,
+                
+                branch: branch,
+                email: email,
+                phoneNo: phoneNo,
+                image: fileURL
+            }).then(() => {
+                alert('Logged in successfully!');
+            }).catch((error) => {
+                alert('Error saving data: ' + error.message);
+            });
+        });
+      </script>
+      
+    
+    
+      <!-- For testing -->
+      <!-- <script type="module" defer>
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js';
+        import { getFirestore, doc, setDoc, collection, addDoc } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js';
+        import { ref, set, child, getDatabase, onValue, get, push, update } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js';
+        import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js';
+        import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js';
+        
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBdJ5wPXm15G-gK4t0qYcNKN1IBDGPw9BY",
+            authDomain: "mayank-dfec0.firebaseapp.com",
+            databaseURL: "https://mayank-dfec0-default-rtdb.firebaseio.com",
+            projectId: "mayank-dfec0",
+            storageBucket: "mayank-dfec0.appspot.com",
+            messagingSenderId: "275743582557",
+            appId: "1:275743582557:web:98f434940c4e8798b260b4",
+            measurementId: "G-2DGFW6JYL9"
+          };
+      
+        // Initializing Firebase
+        const app = initializeApp(firebaseConfig);
+        
+
+        const db= getFirestore();
+
+        const storage = getStorage();
+
+        document.querySelector('.contact-form').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Prevent the default form submission
+        
+            //  code to handle the form submission
+            const firstName = document.querySelector('input[name="FirstName"]').value;
+            const lastName = document.querySelector('input[name="LastName"]').value;
+            const branch = document.querySelector('input[name="Branch"]').value;
+            const email = document.querySelector('input[name="Email"]').value;
+            const phoneNo = document.querySelector('input[name="Tel"]').value;
+            const fileInput = document.querySelector('input[name="attachment"]');
+            const file= fileInput.files[0];
+
+            let fileURL = '';
+
+            if (file) {
+                // Upload file to Firebase Storage
+                const storageReference = storageRef(storage, 'attachments/' + file.name);
+                await uploadBytes(storageReference, file);
+                fileURL = await getDownloadURL(storageReference);
+            }
+
+            
+            const reference = doc(db, "users" ,document.getElementById("phoneNo").value);
+            await setDoc(reference, {
+                NmaeBranch: firstName+lastName+branch,
+               
+                branch: branch,
+                email: email,
+                phoneNo: phoneNo,
+                image: fileURL
+            }).then(() => {
+                alert('Logged in successfully!');
+            }).catch((error) => {
+                alert('Error saving data: ' + error.message);
+            });
+        });
+      </script> -->
+
+     
+</body>
+</html>
