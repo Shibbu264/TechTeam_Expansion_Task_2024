@@ -1,0 +1,124 @@
+*{
+    margin : 0;
+    padding : 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+:root{
+    --primary-color: #333;
+    --secondary-color: #ccc; 
+    --teritiary-color: #fff;
+    transition: 1s ease-in-out;
+}
+
+.dark{
+    --primary-color: #fff;
+    --secondary-color: #333;
+    --teritiary-color: black;
+}
+
+body {
+    background-color: var(--teritiary-color);
+    transition: background-color 1s ease-in-out;
+}
+
+.heading, .subHeading {
+    color: var(--primary-color);
+    transition: color 1s ease-in-out;
+}
+
+.heading {
+    color: var(--primary-color);
+    text-align: center;
+    padding: 10px;
+}
+
+.subHeading {
+    margin-top:10px;
+    color: var(--primary-color);
+    display: inline;
+}
+
+.dropdown{
+    padding: 10px;
+    margin: 10px 0px;
+    display: block;
+}
+
+select{
+    width :22%;
+    padding:10px;
+    border-radius: 5px;
+    border: 1px solid var(--secondary-color);
+}
+
+.textbox {
+    width: 20%;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    border: 1px solid var(--secondary-color);
+    display: block;
+}
+
+.star {
+    display : inline;
+    color:red;
+}
+
+.center {
+    text-align: center;
+}
+
+.center .textbox{
+    margin:0 auto;
+    margin-bottom: 10px;
+}
+
+.center .dropdown{
+    margin:0 auto;
+}
+
+select option {
+    font-size: 16px;    
+    padding: 10px;      
+}
+.container{
+    text-align:center;
+    margin:10px;
+}
+.submit{
+    padding: 10px 20px;
+    background-color: #4d94ff;
+    color: var(--teritiary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+#submit {
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  #submit.green:hover {
+    background-color: #33ff33;
+  }
+  
+  #submit.red:hover {
+    background-color: #ff3333;
+  }
+  .outbox {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+  h1{
+    justify-content: center;
+  }
+#mode{
+    cursor: pointer;
+    padding :15px; 
+}
+
+body.dark #mode {
+    color: #fff;
+}

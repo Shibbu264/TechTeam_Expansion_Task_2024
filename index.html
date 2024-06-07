@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="outbox">
+        <div style="width: 100%;">
+            <h1 class="heading">Please enter your details</h1>
+        </div>
+        <div>
+            <i class="fa-regular fa-2x fa-moon" id="mode"></i>
+        </div>
+    </div>
+    <div class="center">
+        <h3 class="subHeading">Full name</h3>
+        <h3 class="star">*</h3>
+        <input class="textbox" tabindex="0" type="text" name="fullname" id="fullname" placeholder="Full Name">
+    </div>
+    <div class="center">
+        <h3 class="subHeading">Branch</h3>
+        <h3 class="star">*</h3>
+        <label class="dropdown" for="branch">
+            <select name="branch" id="branch">
+                <option value="Architecture, Planning and Design">Architecture, Planning and Design</option>
+                <option value="Ceramic Engineering and Technology">Ceramic Engineering and Technology</option>
+                <option value="Chemical Engineering">Chemical Engineering</option>
+                <option value="Civil Engineering">Civil Engineering</option>
+                <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+                <option value="Electrical Engineering">Electrical Engineering</option>
+                <option value="Electronics Engineering">Electronics Engineering</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                <option value="Metallurgical Engineering">Metallurgical Engineering</option>
+                <option value="Mining Engineering">Mining Engineering</option>
+                <option value="Pharmaceutical Engineering and Technology">Pharmaceutical Engineering and Technology</option>
+                <option value="Industrial Chemistry">Industrial Chemistry</option>
+                <option value="Mathematical Sciences and Computing">Mathematical Sciences and Computing</option>
+                <option value="Physics">Physics</option>
+                <option value="Biochemical Engineering">Biochemical Engineering</option>
+                <option value="Biomedical Engineering">Biomedical Engineering</option>
+                <option value="Materials Science and Technology">Materials Science and Technology</option>
+            </select>
+        </label>
+    </div>
+    <div class="center">
+        <h3 class="subHeading">Email</h3>
+        <h3 class="star">*</h3>
+        <input class="textbox" tabindex="0" type="email" name="email" id="email" placeholder="E-mail">
+    </div>
+    <div class="center">
+        <h3 class="subHeading">Phone number</h3>
+        <h3 class="star">*</h3>
+        <input class="textbox" tabindex="0" type="tel" name="phone" id="phone" placeholder="Phone number">
+    </div>
+    <div class="container">
+        <button id="submit" tabindex="0" class="submit">Submit</button>
+    </div>
+    <script src="https://kit.fontawesome.com/13afe7fab1.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
