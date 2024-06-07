@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Firebase_form</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="icon" type="image/x-icon" href="e-cell.jpeg">
+
+    </head>
+
+    <body>
+        <div class="box">
+            <div class="form">
+                <h2>Login Form</h2>
+                <form id="submitForm">
+                    <div class="inputbox">
+                        <i class='bx bxs-user' style="color: white;"></i>
+                        <input type="text" value="" id="name" placeholder="Your Full Name" required>
+                    </div>
+                    <div class="inputbox">
+                        <i class='bx bx-book-alt' style="color: white;"></i>
+
+                        <input type="text" value="" id="branch" required placeholder="Branch">
+
+                    </div>
+                    <div class="inputbox">
+                        <i class='bx bxl-gmail' style="color: white;"></i>
+
+                        <input type="email" value="" id="email" required placeholder="E-mail">
+
+                    </div>
+                    <div class="inputbox">
+                        <i class='bx bx-mobile-alt' style="color: white;"></i>
+                        <input type="tel" value="" id="phone" placeholder="Phone Number" pattern="[0-9]{10}" required>
+                    </div>
+                    <div class="submit_">
+                        <input type="submit" id="submitData" value="Submit" class="sub" ;>
+                    </div>
+                    <div class="reset_">
+                        <input type="reset" id="resetData" value="Reset" class="res">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <script src="script.js" type="module" ></script>
+    </body>
+</html>
+
+
