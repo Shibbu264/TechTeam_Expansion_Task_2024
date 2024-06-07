@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participant Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>  
+    <div class="container">
+        <h1>Participant Form</h1>
+        <form id="participantForm">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="branch">Branch:</label>
+                <input type="text" id="branch" name="branch" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" required>
+            </div>
+            <div class="error" id="error"></div>
+            <button type="submit">Submit</button>
+            
+        </form>
+    </div>
+    <script type="module" src="form.js"></script>
+</body>
+</html>
