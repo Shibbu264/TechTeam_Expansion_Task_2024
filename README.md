@@ -117,6 +117,9 @@ Here are some of the screenshots of my project demostrating the functionalities:
 
 ![website ss1](https://github.com/MuskanPastor/TechTeam_Expansion_Task_2024/assets/154066638/830385c0-21dd-4de1-aacb-7242f9b7a234)
 
+![firebase](https://github.com/MuskanPastor/TechTeam_Expansion_Task_2024/assets/154066638/68b47d47-6fde-4fba-885e-545c5b9ca202)
+
+
 Here is the video demonstration of my project:
 
 https://github.com/MuskanPastor/TechTeam_Expansion_Task_2024/assets/154066638/2f5e1d25-c148-43f6-a3fa-685ce289a8b7
