@@ -62,11 +62,25 @@ submitButton.addEventListener('click', function(event) {
         const colRef = db.collection(FirstNameBranch);
         const addDocument = async () => {
             try {
+                const imageInput = document.querySelector('#imageInput');
+        const imageFile = imageInput.files[0];
+        let base64Image = "";
+
+        if (imageFile) {
+            base64Image = await new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onloadend = () => resolve(reader.result);
+                reader.onerror = reject;
+                reader.readAsDataURL(imageFile);
+            });
+        }
+
                 const docData = {
                     fullName: fullname.value,
                     email: email.value,
                     phoneNumber: phone.value,
-                    branch: branch.value
+                    branch: branch.value,
+                    image: base64Image
                 };
                 const docRef = await colRef.add(docData);
                 console.log("Document written with ID: ", docRef.id);
