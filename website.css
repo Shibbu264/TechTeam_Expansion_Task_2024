@@ -1,0 +1,92 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;  
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+  }
+  
+  .parentcontainer {
+    width: 400px; 
+    max-width: 90%;  
+    background: rgba(0, 0, 0, 0.6);  
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 2px solid white;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .input {
+    position: relative;
+    margin: 25px 0;
+    border-bottom: 2px solid white;
+  }
+  
+  input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    height: 40px;  
+    font-size: 16px;
+  }
+  
+  .input label {
+    position: absolute;
+    top: 50%;  
+    left: 5px;
+    color: #ffffff;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;  
+  }
+  
+  .input input:focus ~ label,
+  .input input:not(:placeholder-shown) ~ label {
+    top: -5px;
+    font-size: 14px; 
+    color: #f0f0f0; 
+  }
+  
+  .input i {
+    position: absolute;
+    right: 5px;
+    top: 50%;  
+    transform: translateY(-50%);
+    color: #f0f0f0;
+  }
+  
+  button {
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    margin-top: 30px;
+    height: 40px;
+    width: 100%;  
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
