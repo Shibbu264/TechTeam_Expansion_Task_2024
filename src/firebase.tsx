@@ -1,5 +1,5 @@
 import firebase from "firebase";
-//add firebase storage for image upload
+
 import "firebase/storage";
 
 
