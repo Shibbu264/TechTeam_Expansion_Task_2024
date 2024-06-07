@@ -109,7 +109,7 @@ Q: How would you know wheather you have succesfully connected to database or not
 A: When we add document to firestore, in response we get a document id, so if you're getting this id that means you have succesfully connected to database.
 
 Here are some of the screenshots of my project demostrating the functionalities:
-(https://github.com/MuskanPastor/TechTeam_Expansion_Task_2024/assets/154066638/f8ea5684-f1c3-4ad9-bbf8-0f5b3cd5989a)
+![website ss](https://github.com/MuskanPastor/TechTeam_Expansion_Task_2024/assets/154066638/f8ea5684-f1c3-4ad9-bbf8-0f5b3cd5989a)
 
 ![website ss3](https://github.com/MuskanPastor/TechTeam_Expansion_Task_2024/assets/154066638/2ef3d383-7414-4830-9598-b742888abbd6)
 
