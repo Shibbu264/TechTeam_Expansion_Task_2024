@@ -44,6 +44,10 @@ body {
     display: block;
 }
 
+#branch{
+    background-color: whitesmoke; 
+}
+
 select{
     width :22%;
     padding:10px;
@@ -58,6 +62,7 @@ select{
     border-radius: 5px;
     border: 1px solid var(--secondary-color);
     display: block;
+    background-color: whitesmoke;
 }
 
 .star {
