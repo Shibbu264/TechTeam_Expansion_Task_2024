@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+    <title>FORMS</title>
+    <link rel="icon" type="image.jpeg" href="favicon/favicon.jpeg" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <h2>SUBMIT YOUR DETAILS</h2>
+      <form method="post"  id="html" style="margin: auto;">
+        <div>
+          <label for="name">NAME</label>
+          <input required type="text" id="name" placeholder="Enter Name" />
+        </div>
+        <div>
+          <label for="branch">BRANCH</label>
+          <input required type="text" id="branch" placeholder="Enter Branch" />
+        </div>
+        <div>
+          <label for="text">Email</label>
+          <input
+            required
+            type="email"
+            id="gmail"
+            name="email"
+            placeholder="@gmail.com"
+          />
+        </div>
+        <div>
+          <label>CONTACT</label>
+          <input
+            required
+            type="tel"
+            name="tel"
+            id="phone"
+            placeholder="Enter Contact"
+          />
+        </div>
+        <div>
+          <button type="submit" style="border: 2px solid black; background-color: springgreen; color: black;">SUBMIT</button>
+        </div>
+      </form>
+      <div class="box1"><p>Submitted</p></div>
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
