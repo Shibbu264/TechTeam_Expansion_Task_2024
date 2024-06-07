@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+
+
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class = "hit" >
+    <form id="honey">
+    
+        
+        <div>
+<h4> Enter basic Information</h4>
+<p>Please fill out this form</p>
+            <label for="name"><h4 class="font">Name:</h4></label>
+            <input type="text" id="name" name="name" required>
+            <div class="error" id="nameError"></div>
+        </div> 
+
+
+        <div>
+            <label for="branch"><h4 class="font">Branch:</h4></label>
+            <input type="text" id="branch" name="Branch" required>
+            <div class="error" id="nameError"></div>
+        </div>
+
+        <div>
+            <label for="email"><h4 class="font">Email:</h4></label>
+            <input type="email" id="email" name="email" required>
+            <div class="error" id="emailError"></div>
+        </div>
+
+        <div>
+            <label for="phone"><h4 class="font">Phone Number:</h4></label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+            <div class="error" id="phoneError"></div>
+        </div>
+
+<button type = "submit" class="btn">Submit</button>
+    </form>
+</div>
+
+<script type="module" src="script.js"></script>
+
+
+</body>
+
+</html>

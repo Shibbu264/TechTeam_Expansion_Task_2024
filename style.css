@@ -1,0 +1,51 @@
+.hit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    
+    }
+    #honey{
+    border: 3px solid rgba(25, 26, 26, 0.187);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 20px;
+    align-items: baseline;
+    padding-left: 10px;
+    color: rgb(0, 0, 0);
+    font-weight: 100;
+    padding-right: 10px;
+    background-image: url("project\ background1.jpg");
+    border-radius: 10px;
+    
+    }
+    .btn{
+        margin-top: 20px;
+    width: 300px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    color: #faf9f9;
+    background-color: blue;
+    border: none;
+    border-radius:20px ;
+    cursor:pointer;
+    transition: box-shadow 3s elastic;
+    }
+    .btn:active {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    
+    .font{
+    font-weight: 400;
+    margin-bottom: 5px;
+    }
+    
+    input{
+    height: 30px;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 300px;
+    }
