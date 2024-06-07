@@ -16,7 +16,7 @@
     const signupForm = document.querySelector('.signup')
     const submittedDataList = document.getElementById('submittedData');
     function displaySubmittedData(data) {
-    submittedDataList.innerHTML = ''; // Clear previous data
+    submittedDataList.innerHTML = ''; 
     const li = document.createElement('li');
     li.textContent = "Name: " + data.name + ", Branch: " + data.branch + ", Email: " + data.email + ", Phone Number: " + data.phonenumber;
     submittedDataList.appendChild(li);
@@ -34,7 +34,7 @@
         return;
     }
     function validateEmail(email) {
-        const emailPattern = /.+@gmail\.com/;
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailPattern.test(email);
     } 
       function validatePhoneNumber(phonenumber) {
