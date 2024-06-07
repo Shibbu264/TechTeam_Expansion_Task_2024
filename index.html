@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participant Form</title>
+	<style>
+		body{
+			font-family: Arial, sans-serif;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			background: url('d481f3c72e283309071f79e01b05c06d.gif') center/cover fixed;
+		}
+		
+		.header{
+			text-align: center;
+			color: #fff;
+			font-size: 24px;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+		}
+		
+		.form{
+			background-color: rgba(31, 31, 31, 0.95);
+			padding: 40px;
+			padding-right: 60px;
+			color: #fff;
+			margin: auto;
+			margin-bottom: 50px;
+			border-radius: 8px;
+			justify-content: center;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			max-width: 450px;
+		}
+
+		#afterform{
+
+			display: none;
+		}
+		
+		label{
+			display: block;
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
+		
+		input{
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+		}
+		
+		button{
+			background-color: rgba(50, 49, 49, 0.95);
+			color: #fff;
+			border: none;
+			margin-top: 25px;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		
+		button:hover {
+			background-color: #0a2add;
+		}
+		
+		.error {
+			color: red;
+			font-size: 14px;
+			margin-top: 5px;
+		}
+		
+		.ecell {
+			text-align: center;
+			margin-bottom: 20px;
+			color: #fff;
+			font-size: 24px;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+		}
+		
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+		
+		ul li {
+			display: inline;
+			margin-right: 10px;
+		}
+		
+		.tab-panel {
+			margin-bottom: 0px;
+			padding-bottom: 0px;
+		}
+		
+		.tab{
+			background-color: rgba(50, 49, 49, 0.95);
+			border: none;
+			border-radius: 0px;
+			border-top-left-radius: 8px;
+			border-top-right-radius: 8px;
+			width: 100px;
+			padding: 15px 20px;
+			cursor: pointer;
+		}
+		
+		.tab.first{
+		
+			margin-left: 20px;
+		}
+		
+		.tab.active{
+			background-color: rgba(31, 31, 31, 0.95);
+		}
+		
+		.tab:hover{
+			background-color: rgba(50, 49, 49, 0.95);
+		}
+		
+		.active:hover{
+			background-color: rgba(31, 31, 31, 0.95);
+		}
+		
+		.tab-content{
+			display: none;
+			height: fit-content;
+			margin: 20px;
+			margin-top: 0px;
+			background-color: rgba(31, 31, 31, 0.95);
+			border-radius: 8px;
+			border-top-left-radius: 0px;
+			color: #ccc;
+			padding: 20px;
+		}
+		
+		.tab-content.active {
+			display: block;
+		}
+		
+		#container{
+			width: 700px;
+			height: 450px;
+			display: block; 
+			overflow: hidden;
+			margin: 0 auto;
+		}
+		
+		#slider{
+			display: block;
+			width: 3500px;
+			list-style-type: none;
+		}
+		
+		.slides{
+			margin: 0;
+			float: left;
+			padding: 0;
+			width: 700px;
+			height: 450px;
+		}
+		
+		.slidesim{
+			width: 700px;
+			height: 450px;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.footer{
+		
+			display: flex;
+			color: #fff;
+			font-size: large;
+			padding: 20px;
+		}
+		
+		.footer a{
+		
+			text-decoration: none;
+			color: #fff;
+		}
+		
+		.footer div{
+		
+			margin: auto;
+		}
+
+		.small{
+
+			display: none;
+		}
+		
+		::-webkit-scrollbar {
+			width: 20px; 
+		}
+		
+		::-webkit-scrollbar-track {
+			background-color: #2b2b2b; 
+		}
+		
+		::-webkit-scrollbar-thumb {
+			background-color: rgb(86, 86, 86); 
+		}
+
+		@media screen and (max-width: 520px) {
+			.slides {
+				width: 80%;
+			}
+
+			#container{
+				width: 400px;
+				height: 450px;
+				display: block; 
+				overflow: hidden;
+				margin: 0 auto;
+			}
+
+			.form{
+
+				width: 79%;
+			}
+
+			.big{
+
+				display: none;
+			}
+
+			.small{
+
+				display: flex;
+				justify-content: center;
+				color: #fff;
+				font-size: large;
+				padding: 20px;
+			}
+
+			.small div{
+
+				margin: auto;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header class="header">
+		<h1>E-Cell Form</h1>
+		<p>Fill the form to apply for E-Cell</p>
+	</header>
+    <div class="container">
+        <form id="participantForm" class="form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="branch">Branch:</label>
+                <input type="text" id="branch" name="branch" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            </div>
+			<div class="form-group">
+				<label for="image">Upload Resume:</label>
+				<input type="file" id="image" name="image" accept="image/*" required>
+				<label for="image" style="font-size: 14px;">*Less than 10MB</label>
+			</div>			
+            <button type="submit">Submit</button>
+        </form>
+        <div id="message"></div>
+    </div>
+
+	<section id="afterform" class="form">
+		<h2 style="font-size: 24px;">Thank You!!</h2>
+		<br>
+		<p style="font-size: 16px;">You will hear from us soon.</p>
+	</section>   
+
+	<div class="tab-panel">
+		<button class="tab first active" id="tabout" onclick="openTab('about', 'tabout')">About</button>
+		<button class="tab" id="tgallery" onclick="openTab('gallery', 'tgallery')">Gallery</button>
+	</div>
+	
+	<div id="about" class="tab-content active">
+		<h2>About E-Cell</h2>
+		<hr>
+		<p>This is the about section. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque facilis dolorum pariatur deleniti ut, dicta enim? Dolor porro repellat repudiandae eius iure fugiat illum, itaque cum blanditiis quis accusantium dicta.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate temporibus ullam corrupti aliquid? Dolorem, placeat quisquam distinctio adipisci asperiores facilis cum commodi, fugiat quo sed eos? Ab aperiam tempore fugiat!</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium totam veniam repellat dolor asperiores nulla magni sed necessitatibus ipsum dolore, officiis quo quam rerum. Sed deleniti magnam culpa. Debitis, praesentium!</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et suscipit, veritatis voluptatibus quasi quo quod placeat dicta adipisci, architecto nulla nam? Officia, tenetur? Reprehenderit eligendi optio hic possimus non temporibus?</p>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate hic ipsam deleniti et. Omnis culpa vel debitis ullam recusandae atque blanditiis error, quos dolorem vitae veniam cumque nesciunt. Culpa, ad.</p>
+		<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt, cumque quibusdam reiciendis aspernatur laborum id sapiente eveniet quae, sint voluptate sunt suscipit praesentium explicabo iste autem sequi accusamus quam consequuntur.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam facere harum labore. Mollitia ullam quis unde nisi. Ad impedit doloribus minima incidunt, facere obcaecati aliquid nulla debitis quas exercitationem perspiciatis?</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt dicta nobis omnis aliquid voluptas similique molestias, recusandae molestiae ducimus. Eum esse a accusantium mollitia quis voluptatem consequatur recusandae tenetur eos.</p>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum voluptates nobis maxime dolore quas, temporibus fugit laboriosam corrupti iure maiores voluptatibus, ab quisquam est expedita! Minus suscipit debitis quasi pariatur?</p>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, eius praesentium! Laudantium porro dolor, natus facilis saepe aperiam blanditiis minus aspernatur, itaque nisi sint maiores dignissimos cumque rerum. Similique, soluta!</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis dolor nulla facilis quisquam asperiores deleniti deserunt laborum adipisci cumque! Sint rerum dicta totam alias incidunt culpa, error neque aut assumenda?</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus molestias libero, aperiam excepturi facere accusantium ut assumenda error quidem rem optio atque. Repellat voluptas dolores porro repudiandae harum optio vitae.</p>
+		<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum dolore eaque dignissimos, laboriosam consequatur quas excepturi adipisci nesciunt quidem veniam, veritatis, similique aspernatur? Magni, repudiandae? Blanditiis provident numquam magnam eveniet.</p>
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit necessitatibus illum iusto a, cupiditate, earum repellendus cum ab pariatur id consequatur rem. Libero omnis eaque exercitationem porro incidunt saepe facere.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis accusantium expedita maxime saepe. Neque fugit corporis et temporibus, unde accusantium blanditiis vero ut consequuntur perspiciatis? Consectetur impedit nostrum nisi est.</p>
+	</div>
+	
+	<div id="gallery" class="tab-content" style="display: none;">
+		<h2>Gallery</h2>
+		<hr>
+		<br>
+		<div id="container">
+			<ul id="slider">
+				<li class="slides"><img class="slidesim" src="pic1.png" alt="pic"></li>
+				<li class="slides"><img class="slidesim" src="pic2.jpg" alt="pic"></li>
+				<li class="slides"><img class="slidesim" src="pic3.jpg" alt="pic"></li>
+				<li class="slides"><img class="slidesim" src="pic4.jpeg" alt="pic"></li>
+				<li class="slides"><img class="slidesim" src="pic1.png" alt="pic"></li>
+			</ul>
+		</div>
+	</div>
+	
+	<footer class="footer big">
+		<div><a href="tel:+1234567890">Mobile: +1234567890</a></div>
+		<div><a href="mailto:example@example.com">Email: example@example.com</a></div>
+	</footer>
+
+	<footer class="footer small">
+		<div><a href="tel:+1234567890">Mobile: +1234567890</a>
+		<br>
+		<a href="mailto:example@example.com">Email: example@example.com</a></div>
+	</footer>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	
+	<script>
+		var $slidercontainer = $("#container");
+		var $slides = $slidercontainer.find(".slides img");
+		var currentslide = 0;
+		var interval;
+	
+		function startslider() {interval = setInterval(slide, 3000)}
+		function slide() {$slides.animate({'margin-left': '-=700px'}, 1000, reachback);}
+		function stopslider() {clearInterval(interval);}
+		
+		function reachback() {
+			currentslide++;
+			if (currentslide === 20) {
+				currentslide = 0;
+				$slides.css('margin-left', 0);
+			}
+		}
+	
+		$slidercontainer.on('mouseenter', stopslider).on('mouseleave', startslider);
+	
+		startslider();
+	</script>
+	
+	<script>
+	
+		function openTab(tabName, tabp) {
+			var tabContents = document.getElementsByClassName("tab-content");
+			var tabs = document.getElementsByClassName("tab");
+	
+			for (var i = 0; i < tabContents.length; i++) {
+				tabContents[i].style.display = "none";
+			}
+	
+			var tabContent = document.getElementById(tabName);
+	
+			tabContent.style.display = "block";
+	
+			for (var i = 0; i < tabs.length; i++) {
+				tabs[i].classList.remove("active");
+			}
+	
+			var tabp = document.getElementById(tabp);
+	
+			tabp.classList.add("active");
+		}
+	
+	</script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-firestore.js"></script>
+
+	<script type="module" src="https://www.gstatic.com/firebasejs/8.3.3/firebase-storage.js"></script>
+
+	<script>
+
+		const firebaseConfig = {
+			apiKey: "AIzaSyDXoFgMlAgxEmeHnYDIPD6z5F4W6WaN9I4",
+			authDomain: "e-cell-83e01.firebaseapp.com",
+			databaseURL: "https://e-cell-83e01-default-rtdb.asia-southeast1.firebasedatabase.app",
+			projectId: "e-cell-83e01",
+			storageBucket: "e-cell-83e01.appspot.com",
+			messagingSenderId: "883458650911",
+			appId: "1:883458650911:web:cbb52badd5773ec694f62a",
+			measurementId: "G-TE9KRSJQ7C"
+		};
+
+		firebase.initializeApp(firebaseConfig);
+
+		var db = firebase.firestore();
+
+		function uploadImage(file, filename) {
+			const storageRef = firebase.storage().ref();
+			const imageRef = storageRef.child(filename);
+
+			return imageRef.put(file);
+		}
+
+		function validateEmail(email) {
+			const re = /\S+@\S+\.\S+/;
+			return re.test(email);
+		}
+
+		function validatePhoneNumber(phoneNumber) {
+			const re = /^\d{10}$/;
+			return re.test(phoneNumber);
+		}
+
+		function showMessage(msg) {
+			const message = document.getElementById('message');
+			message.textContent = msg;
+			setTimeout(() => {
+				message.textContent = '';
+			}, 3000);
+		}
+
+		const form = document.getElementById('participantForm');
+		const afterform = document.getElementById('afterform');
+
+		form.addEventListener('submit', function(event) {
+			event.preventDefault();
+
+			const name = form.name.value;
+			const branch = form.branch.value;
+			const email = form.email.value;
+			const phoneNumber = form.phoneNumber.value;
+			const image = form.image.files[0]; 
+
+			if (!image) {
+				showMessage('Please select an image');
+				return;
+			}
+
+			if (!validateEmail(email)) {
+				showMessage('Invalid email address');
+				return;
+			}
+
+			if (!validatePhoneNumber(phoneNumber)) {
+				showMessage('Invalid phone number');
+				return;
+			}
+
+			const collectionName = `IshantECE`;
+
+			const filename = `${collectionName}_${Date.now()}_${image.name}`;
+			uploadImage(image, filename)
+			.then((snapshot) => {
+				return snapshot.ref.getDownloadURL()
+				.then(imageUrl => {
+					return { snapshot, imageUrl }; 
+				});
+			})
+			.then(({ snapshot, imageUrl }) => {
+				return db.collection(collectionName).add({
+					name: name,
+					branch: branch,
+					email: email,
+					phoneNumber: phoneNumber,
+					imageUrl: imageUrl
+				})
+				.then(docRef => {
+					return { docRef, imageId: snapshot.metadata.name }; 
+				});
+			})
+			.then(({ docRef, imageId }) => { 
+				console.log('Document ID:', docRef.id);
+				console.log('Image ID:', imageId);
+				alert('Form submitted successfully');
+				form.style.display = "none";
+				afterform.style.display = "block";
+			})
+			.catch((error) => {
+				alert('Error submitting form');
+				console.error('Error adding document: ', error);
+			});
+		});
+	</script>
+</body>
+</html>
