@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section>
+        
+        <div class="inputs">
+            
+            <div class="input1">
+             <form id="forms">
+                <h1>Registration Form</h1>
+                <div class="field">
+                    <span class="icon"><i class="ri-user-line"></i></span>
+                    <input type="text" id="firstname" placeholder="First Name" >
+                </div>
+                <span id="firstnameerror" class="error"></span>
+                <div class="field">
+                    <span class="icon"><i class="ri-user-line"></i></span>
+                    <input type="text" id="lastname" placeholder="Last Name" >
+                </div>
+                <span id="lastnameerror" class="error"></span>
+                <div class="field">
+                    <span class="icon"><i class="ri-graduation-cap-line"></i></span>
+                    <select name="branch" id="branch">
+                        <option value="CSE">CSE</option>
+                        <option value="ECE">ECE</option>
+                        <option value="MNC">MNC</option>
+                        <option value="EEE">EEE</option>
+                        <option value="EP">EP</option>
+                        <option value="MEC">MEC</option>
+                        <option value="CHEM">CHEM</option>
+                        <option value="CIV">CIV</option>
+                        <option value="BIOMED">BIOMED</option>
+                        <option value="BIOCHEM">BIOCHEM</option>
+                        <option value="MET">MET</option>
+                        <option value="MIN">MIN</option>
+                        <option value="PHE">PHE</option>
+                        <option value="CERA">CERA</option>
+                        <option value="IC">IC</option>
+                        <option value="MST">MST</option>
+                        <option value="ARCH">ARCH</option>
+
+                    </select>
+                </div>
+                <div id="brancherror" class="error" ></div>
+                <div class="field">
+                    <span class="icon"><i class="ri-mail-line"></i></span>
+                    <input type="text" id="mail" placeholder="mail">
+                </div>
+                <span id="mailerror" class="error"></span>
+                <div class="field">
+                    <span class="icon"><i class="ri-phone-line"></i></span>
+                    <input type="text" id="phone" placeholder="Phone Number">
+                </div>
+                <span id="phoneerror" class="error"></span>
+                <div class="field">
+                    <span class="icon"><i class="ri-image-line"></i></span>
+                    <input type="file" id="file" >
+                </div>
+                <button type="submit" class="submit">submit</button>
+            </form>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

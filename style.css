@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito Sans" , sans-serif;
+    box-sizing: border-box;
+    
+}
+section{
+    height: 100vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #051731;
+    
+}
+.error{
+    color: red;
+font-size: small;}
+.inputs{
+    background-image: linear-gradient(150deg , #47a913 0% ,#be2079 100%);
+    border-radius: 15px;
+    transition: all 0.5s;
+    width:350px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding:15px;
+    border-radius: 15px;
+    background-color: #72a9c5;
+   
+    transition: 4s;
+}
+.input1{
+    border-radius: 0;
+    transition: all 0.3s;
+}
+.inputs:hover{
+    box-shadow: 0px 0px 30px 4px #53a9cd;
+}
+.input1:hover{
+    transform: scale(0.98);
+}
+h1{
+    text-align: center;
+    color: #255066;
+    font-size:30px;
+}
+.field{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:7px;
+    color:#096694;
+    padding:10px 10px 4px 10px;
+    background-color: #72a9c5;
+    box-shadow: inset 3px 7px 12px #4d8cab;
+    border-radius: 20px;
+}
+.icon{
+    font-size: 20px;
+}
+input{
+    background-color: transparent;
+    border:none;
+    outline: none;
+    width:100%;
+    color: #14546d;
+}
+.submit{
+    padding: 5px;
+    background-color: #6aa8c6;
+    font-weight: bolder ;
+    text-transform: capitalize;
+    cursor: pointer;
+    outline:none;
+    transition: 0.5s;
+    border-radius: 10px;
+    border:none;
+    box-shadow: inset 2px 2px 2px #ac8c57;
+    
+
+}
+.submit:hover{
+    background-color: #EE6C4D;
+}
+select{
+    background-color: transparent;
+    border:none;
+    outline: none;
+    width:100%;
+    color: #14546d;
+    
+    
+}
+::placeholder{
+    color: black;
+
+}
+
