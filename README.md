@@ -1,3 +1,8 @@
+Here is the link of my deployed website:
+https://ecellproject.netlify.app/
+
+I have used my own configuration instead of which was provided ,i have attached my config here below: 
+
 # Task: Explore Firestore and firebase
 
 ## Description
@@ -65,44 +70,61 @@ The deadline for completing this task is the end of the day (EOD) on June 6th.(N
 
 ## Firestore config file
 ```
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCdKthmN5V1tKXJ5vlMxbqc1L4o4clEKj4",
-  authDomain: "techteamtask2024.firebaseapp.com",
-  projectId: "techteamtask2024",
-  storageBucket: "techteamtask2024.appspot.com",
-  messagingSenderId: "1067539417498",
-  appId: "1:1067539417498:web:cb7f4bf39e824524ce1223",
-  measurementId: "G-76JGN8JWVE"
+ apiKey: "AIzaSyBveCIZLitId-GY29ITvp8Qn7ySkKv5sJY",
+ authDomain: "e-celltask.firebaseapp.com",
+ projectId: "e-celltask",
+ storageBucket: "e-celltask.appspot.com",
+ messagingSenderId: "1038712385022",
+ appId: "1:1038712385022:web:2badcf88e1eb6b8527e4af"
 };
 ```
-or if you want to use CDN or basically VanillaJS here is the script
+VanillaJS here is the script
 ```
 <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-  apiKey: "AIzaSyCdKthmN5V1tKXJ5vlMxbqc1L4o4clEKj4",
-  authDomain: "techteamtask2024.firebaseapp.com",
-  projectId: "techteamtask2024",
-  storageBucket: "techteamtask2024.appspot.com",
-  messagingSenderId: "1067539417498",
-  appId: "1:1067539417498:web:cb7f4bf39e824524ce1223",
-  measurementId: "G-76JGN8JWVE"
+  
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+ import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
+ import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-storage.js";
+ 
+ const firebaseConfig = {
+ apiKey: "AIzaSyBveCIZLitId-GY29ITvp8Qn7ySkKv5sJY",
+ authDomain: "e-celltask.firebaseapp.com",
+ projectId: "e-celltask",
+ storageBucket: "e-celltask.appspot.com",
+ messagingSenderId: "1038712385022",
+ appId: "1:1038712385022:web:2badcf88e1eb6b8527e4af"
 };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  // Initializing Firebase
+ const app = initializeApp(firebaseConfig);
+const db = getFirestore();
+const storage = getStorage();
 </script>
 ```
 
 ## FAQ
 Q: How would you know wheather you have succesfully connected to database or not?<br>
 A: When we add document to firestore, in response we get a document id, so if you're getting this id that means you have succesfully connected to database.
+
+Here are some of the screenshots of my project demostrating the functionalities:
+![website ss](https://github.com/MuskanPastor/TechTeam_Expansion_Task_2024/assets/154066638/f8ea5684-f1c3-4ad9-bbf8-0f5b3cd5989a)
+
+![website ss3](https://github.com/MuskanPastor/TechTeam_Expansion_Task_2024/assets/154066638/2ef3d383-7414-4830-9598-b742888abbd6)
+
+![website ss2](https://github.com/MuskanPastor/TechTeam_Expansion_Task_2024/assets/154066638/e14e7f18-f543-4819-a05f-0d9c8ca8dd27)
+
+![website ss1](https://github.com/MuskanPastor/TechTeam_Expansion_Task_2024/assets/154066638/830385c0-21dd-4de1-aacb-7242f9b7a234)
+
+![firebase](https://github.com/MuskanPastor/TechTeam_Expansion_Task_2024/assets/154066638/68b47d47-6fde-4fba-885e-545c5b9ca202)
+
+
+Here is the video demonstration of my project:
+
+https://github.com/MuskanPastor/TechTeam_Expansion_Task_2024/assets/154066638/2f5e1d25-c148-43f6-a3fa-685ce289a8b7
+
+
+
+
+
