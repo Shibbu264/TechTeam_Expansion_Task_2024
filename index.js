@@ -70,6 +70,8 @@ submitButton.addEventListener('click', function(event) {
                 };
                 const docRef = await colRef.add(docData);
                 console.log("Document written with ID: ", docRef.id);
+                let form = document.querySelector('#myForm');
+                form.reset();
             } catch (e) {
                 console.error("Error adding document: ", e);
             }
