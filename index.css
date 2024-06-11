@@ -149,6 +149,12 @@ padding-left: 7px;
 box-sizing: border-box;
 
   }
+  @media (max-width:2103px) {
+    .can2 input{
+      padding-left:7px;
+    }
+    
+  }
   @media (max-width:403px) {
     .can2 input{
       width: 90%;
